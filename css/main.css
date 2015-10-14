@@ -19,6 +19,7 @@ h2 {
 
 nav {
 	position: fixed;
+	z-index: 10;
 	height: 35px;
 	width: 100%;
 	font-size: 16px;
@@ -44,7 +45,7 @@ nav li {
 	padding: 0.5em;
 	padding-left: 0px;
 }
-a:link {
+nav a {
 	color: white;
 }
 a:hover {
@@ -53,36 +54,52 @@ a:hover {
 }
 
 header {
+	background-position: center;
 	padding-top: 3em;
 }
 
-headline .container{
-	padding-top: 75px;
-	padding-bottom: 75px;
+.headline {
 	font-style: italic;
 }
 
-headline svg {
+.headline svg {
 	height: 2.5em;
 	padding-bottom: 1em;
 	fill: #b06927;
 }
 
 #cafe {
-	padding-top: 50px;
+	text-align: center; 
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	background-color: #dbdce3;
 }
 
-#map {
+#cafe svg {
+	margin: 10px;
+	fill: #b06927;
+	height: 1.5em;
+}
+
+#cafe img{
 	border-radius: 5px;
 }
 
-#cafe svg {
-	fill: b06927;
-	height: 1.3em;
+#menu dd {
+	font-style: italic;
+	padding-left: 1em; 
+}
+
+#menu h2 {
+	margin-bottom: 0;
 }
 
 #story {
+	width: 100%;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
 	background-color: #dbdce3;
 }
 
@@ -97,7 +114,7 @@ footer {
 	border-top: 3px solid #D87E28;
 	background-color: #afb3c2;
 	font-size: 12px;
-	padding-top: 1em
+	padding-top: 1em;
 	clear: both;
 }
 
@@ -105,7 +122,7 @@ footer {
 	header p {
 		display: none;
 	}
-	headline svg {
+	.headline svg {
 		display: none;
 	}
 }
@@ -127,15 +144,19 @@ footer {
 	}
 	header {
 		background-image: url("../img/background-sm.jpg");
+		background-repeat: no-repeat;
 		color: white;
 		text-align: right;
 		min-height: 550px;
 	}
-	headline {
+	.headline {
 		font-size: 1.25em;
 		text-align: center;
 		margin-top: 3em;
 		margin-bottom: 3em; 
+	}
+	#cafe svg {
+		margin-bottom: 30px;
 	}
 	#story img {
 		max-height: 400px;
@@ -148,6 +169,7 @@ footer {
 @media screen and (min-width: 992px) {
 	header {
 		background-image: url("../img/background-md.jpg");
+		background-repeat: no-repeat;
 	}
 	header h1 {
 		font-size: 4em;
@@ -157,5 +179,6 @@ footer {
 @media screen and (min-width: 1200px) {
 	header {
 		background-image: url("../img/background-lg.jpg");
+		background-repeat: no-repeat;
 	}
 }
